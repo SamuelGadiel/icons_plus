@@ -1,3 +1,7 @@
+## 5.0.1 (fork)
+
+- Fix build failure on Flutter versions where `IconData` is a `final` class (3.44+): each icon set's wrapper class (e.g. `FontAwesomeIconData`) extended `IconData`, which is no longer allowed. Replaced every wrapper class with direct `const IconData(...)` constants, preserving all existing identifiers.
+
 ## 5.0.0
 
 - All exsiting icons sets are updated with the latest version
